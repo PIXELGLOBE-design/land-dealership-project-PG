@@ -1,0 +1,136 @@
+
+:root {
+    --cream: #F7EEDB;
+    --orange: #EBA24C;
+    --redbrown: #A43931;
+    --dark: #3A2E2A;
+    --green: #264E36;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    font-family: "Inter", sans-serif;
+    color: var(--dark);
+}
+
+.landingPage {
+    position: fixed;
+    inset: 0;
+    background: var(--redbrown);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    flex-direction: column;
+}
+
+.landingTitle {
+    font-size: 4vw;
+    color: var(--cream);
+    opacity: 0;
+    transform: scale(0.8);
+    font-weight: 800;
+}
+
+.landingFadeOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--orange);
+    transform: translateY(100%);
+}
+
+.focus {
+    height: 100vh;
+    position: relative;
+    padding: 10vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.page_inside {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.concentration h1 {
+    font-size: 5vw;
+    line-height: 1.1;
+    font-weight: 800;
+    margin: 0;
+}
+.concentration p {
+    font-size: 1.3vw;
+    margin-top: 1.5vw;
+    max-width: 30vw;
+}
+
+.listing {
+    padding: 1vw 2vw;
+    margin-top: 2vw;
+    background: var(--orange);
+    border: none;
+    font-size: 1.2vw;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.listing:hover {
+    background: var(--redbrown);
+}
+
+.contact {
+    padding: 1vw 2vw;
+    margin-top: 1vw;
+    background: transparent;
+    border: 2px solid var(--orange);
+    font-size: 1.2vw;
+    color: var(--orange);
+    font-weight: 700;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.contact:hover {
+    background: var(--orange);
+    color: white;
+}
+
+.circle {
+    width: 28vw;
+    height: 28vw;
+    background: var(--redbrown);
+    border-radius: 50%;
+    position: absolute;
+    right: 8vw;
+    top: 50%;
+    transform: translateY(-50%) scale(0.5);
+    opacity: 0;
+    z-index: -1;
+}
+
+.buttons {
+    display: flex;
+    gap: 1vw;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('https://www.freepik.com/free-vector/bauhaus-background-brown-earth-tone-vector-wallpaper_18221203.htm');
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: -1;
+}
